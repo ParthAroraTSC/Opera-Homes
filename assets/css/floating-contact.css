@@ -1,0 +1,122 @@
+/* Floating Contact Widget */
+.floating-contact-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-contact-wrapper.active .contact-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.contact-option {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+}
+
+.contact-option:hover {
+    transform: scale(1.12);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.contact-option.phone {
+    background-color: #4CAF50;
+}
+
+.contact-option.whatsapp {
+    background-color: #25D366;
+}
+
+/* Trigger button */
+.contact-trigger {
+    cursor: pointer;
+}
+
+.trigger-icon {
+    width: 62px;
+    height: 62px;
+    background-color: #a485ce;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.trigger-icon:hover {
+    background-color: #9370be;
+}
+
+.trigger-icon i {
+    position: absolute;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.fa-xmark {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.fa-comments {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.floating-contact-wrapper.active .fa-comments {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.floating-contact-wrapper.active .fa-xmark {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+@media (max-width: 767px) {
+    .floating-contact-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+    .trigger-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+    }
+    .contact-option {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,172 @@
+/* --- OPERA HOMES COMMERCIAL PAGE STYLES --- */
+:root {
+    --midnight: #14183e;
+    --accent-blue: #3b82f6;
+    --soft-blue: #64748b;
+}
+
+/* Page Header with Premium Background */
+.page-header-premium {
+    position: relative;
+    padding: 180px 0 100px;
+    text-align: center;
+    background-image: url('../../images/gallery/Multipurpose-Hall-2_11zon-1-1024x682.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    overflow: hidden;
+}
+
+.page-header-premium::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.page-header-premium .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header-premium h1 {
+    font-size: 64px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.page-header-premium .breadcrumb { justify-content: center; background: transparent; padding: 0; }
+.page-header-premium .breadcrumb-item a { color: #fff; font-weight: 600; text-decoration: none; opacity: 0.8; }
+.page-header-premium .breadcrumb-item a:hover { opacity: 1; color: #fff; }
+.page-header-premium .breadcrumb-item.active { color: #fff; opacity: 0.6; }
+.page-header-premium .breadcrumb-item + .breadcrumb-item::before { 
+    content: "/"; 
+    color: rgba(255,255,255,0.3); 
+    padding: 0 10px;
+}
+
+.page-header-premium .section-subtitle {
+    display: inline-block;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Tab System */
+.projects-tabs-section { padding: 90px 0 120px; background: #fff; }
+.tab-buttons-premium {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 70px;
+}
+.tab-btn {
+    padding: 15px 40px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--midnight);
+    background: var(--midnight);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tab-btn.active, .tab-btn:hover {
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+.tab-content-panel { display: none; }
+.tab-content-panel.active { display: block; animation: fadeIn 0.8s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Featured Project Row */
+.featured-project-row {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+    margin-bottom: 50px;
+    border: 1px solid #f1f5f9;
+}
+.featured-img-box {
+    width: 48%;
+    min-height: 450px;
+}
+.featured-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.featured-info-box {
+    width: 52%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.featured-info-box h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--midnight);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+.featured-info-box p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.project-mini-gallery img {
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.project-mini-gallery img:hover { transform: scale(1.1); }
+
+.btn-view-premium {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--midnight);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: 0.3s;
+    margin-top: 25px;
+    width: fit-content;
+    text-decoration: none;
+}
+.btn-view-premium:hover {
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .page-header-premium h1 { font-size: 44px; }
+    .featured-project-row { flex-direction: column; }
+    .featured-img-box, .featured-info-box { width: 100%; }
+    .featured-img-box { min-height: 320px; }
+    .featured-info-box { padding: 40px 30px; }
+}

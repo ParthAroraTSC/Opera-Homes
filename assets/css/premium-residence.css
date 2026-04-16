@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Premium Residence Section - High Fidelity Sync
+   ========================================================================== */
+.premium-residence-stats {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.res-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 850px;
+    position: relative;
+}
+
+.res-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(13, 17, 43, 0.45);
+}
+
+.res-content {
+    position: relative;
+    z-index: 10;
+    padding: 120px 0;
+}
+
+.res-title-box h3 {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.res-title-box h3 span {
+    color: #e16240;
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+.res-title-box h2 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+    color: #fff;
+}
+
+.res-title-box h2 .accent {
+    color: #e16240;
+    display: block;
+    margin-top: 10px;
+}
+
+.res-tour-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.circle-tour-btn {
+    width: 170px;
+    height: 170px;
+    background: #141824;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.2;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circle-tour-btn:hover {
+    background: #e16240;
+    transform: scale(1.1) rotate(15deg);
+    color: #fff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.res-stats-grid {
+    margin-top: 100px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 60px;
+}
+
+.res-stat-item .label {
+    color: #e16240;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.res-stat-item h4 {
+    font-size: 54px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.res-stat-item p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    max-width: 260px;
+}
+
+@media (max-width: 991px) {
+    .res-title-box h2 { font-size: 46px; }
+    .res-tour-box { justify-content: flex-start; margin-top: 40px; }
+    .circle-tour-btn { width: 140px; height: 140px; font-size: 16px; }
+    .res-stats-grid { margin-top: 60px; }
+}

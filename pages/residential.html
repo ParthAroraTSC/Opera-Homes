@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Awaiken">
+	<!-- Page Title -->
+    <title>Residential Projects | Opera Homes</title>
+	<!-- Favicon Icon -->
+	<link rel="icon" type="image/jpeg" href="../assets/images/logos/logo.jpeg">
+	<link rel="apple-touch-icon" href="../assets/images/logos/logo.jpeg">
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="../assets/css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link href="../assets/css/all.min.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="../assets/css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- Mouse Cursor Css File -->
+	<link rel="stylesheet" href="../assets/css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="../assets/css/custom.css" rel="stylesheet" media="screen">
+    <!-- Floating Contact Widget Css -->
+	<link href="../assets/css/floating-contact.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img src="../assets/images/common/loader.svg" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+                        <!-- Header Start -->
+	<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="../index.html">
+						<div class="logo-white-box">
+						    <img src="../assets/images/logos/logo.jpeg" alt="Opera Homes">
+						</div>
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>                                
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Our Projects</a>
+                                    <ul>                                        
+                                        <li class="nav-item"><a class="nav-link" href="residential.html">Residential</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="commercial.html">Commercial</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                                <li class="nav-item"><a class="nav-link" href="projects.html">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>                             
+                            </ul>
+                        </div>
+                        <!-- Header Social Icons Start -->
+                        <div class="header-social-icons">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- Header Social Icons End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+    <!-- Page Header Start -->
+	<div class="page-header parallaxie">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<!-- Page Header Box Start -->
+					<div class="page-header-box">
+						<h1 class="text-anime-style-3" data-cursor="-opaque">Residential Projects</h1>
+						<nav class="wow fadeInUp">
+                            <ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="../index.html">home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Residential Projects</li>
+							</ol>
+						</nav>
+					</div>
+					<!-- Page Header Box End -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page Header End -->
+
+    <!-- Page Projects Start -->
+    <div class="page-projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <style>
+                        /* Tabbed Projects Styling */
+                        .project-tabs-container {
+                            margin-bottom: 60px;
+                        }
+                        .tab-filter-nav {
+                            display: flex;
+                            justify-content: center;
+                            gap: 15px;
+                            margin-bottom: 50px;
+                        }
+                        .tab-btn {
+                            padding: 12px 35px;
+                            border: none;
+                            background: #000;
+                            color: #fff;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            min-width: 180px;
+                        }
+                        .tab-btn.active {
+                            background: var(--accent-blue, #3b82f6);
+                        }
+                        
+                        .tab-content-panel {
+                            display: none;
+                            animation: fadeIn 0.5s ease;
+                        }
+                        .tab-content-panel.active {
+                            display: block;
+                        }
+
+                        /* Akshar Style Featured Row */
+                        .featured-project-row {
+                            display: flex;
+                            align-items: center;
+                            gap: 50px;
+                            background: #fff;
+                            padding: 20px;
+                            border-radius: 4px;
+                        }
+                        .featured-img-box {
+                            width: 50%;
+                            flex-shrink: 0;
+                        }
+                        .featured-img-box img {
+                            width: 100%;
+                            border-radius: 2px;
+                            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                        }
+                        .featured-info-box {
+                            width: 50%;
+                        }
+                        .featured-info-box h2 {
+                            font-size: 48px;
+                            font-weight: 800;
+                            margin-bottom: 20px;
+                            color: var(--midnight, #14183e);
+                        }
+                        .featured-info-box p {
+                            font-size: 16px;
+                            line-height: 1.6;
+                            color: #475569;
+                            margin-bottom: 15px;
+                        }
+                        .rera-tag {
+                            font-weight: 800;
+                            color: #000;
+                            font-size: 13px;
+                            margin-bottom: 25px;
+                            display: block;
+                        }
+                        .btn-view-premium {
+                            display: inline-block;
+                            padding: 14px 35px;
+                            background: #1e293b;
+                            color: #fff;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            font-size: 13px;
+                            border-radius: 2px;
+                            transition: 0.3s;
+                        }
+                        .btn-view-premium:hover {
+                            background: var(--accent-blue, #3b82f6);
+                            color: #fff;
+                        }
+
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(10px); }
+                            to { opacity: 1; transform: translateY(0); }
+                        }
+
+                        @media (max-width: 991px) {
+                            .featured-project-row { flex-direction: column; }
+                            .featured-img-box, .featured-info-box { width: 100%; }
+                            .tab-filter-nav { flex-direction: column; align-items: center; }
+                        }
+                    </style>
+
+                    <!-- Filter Navigation -->
+                    <div class="tab-filter-nav wow fadeInUp">
+                        <button class="tab-btn" onclick="openTab(event, 'completed')">Completed Projects</button>
+                        <button class="tab-btn active" onclick="openTab(event, 'ongoing')">Ongoing Projects</button>
+                        <button class="tab-btn" onclick="openTab(event, 'future')">Future Projects</button>
+                    </div>
+
+                    <!-- Ongoing Tab Panel -->
+                    <div id="ongoing" class="tab-content-panel active">
+                        <div class="featured-project-row wow fadeInUp">
+                            <div class="featured-img-box">
+                                <img src="../assets/images/opera Akshara/akshar-1024x654.png" alt="Opera Akshar">
+                            </div>
+                            <div class="featured-info-box">
+                                <h2>Opera Akshar</h2>
+                                <p>Welcome to Opera Akshar Bangalore Jayanagar 3rd Block. Your home tells the story of your life. It is an ode to all your achievements.</p>
+                                <span class="rera-tag">RERA APPROVAL NO. PRM/KA/RERA/1251/309/PR/051125/008225.</span>
+                                
+                                <!-- Gallery Preview -->
+                                <div class="project-mini-gallery" style="display: flex; gap: 10px; margin-bottom: 25px;">
+                                    <img src="../assets/images/opera Akshara/ak-2_11zon-1024x681.png" style="width: 80px; height: 60px; object-fit: cover; border-radius: 2px;" alt="Akshar 1">
+                                    <img src="../assets/images/opera Akshara/ak-3_11zon.png" style="width: 80px; height: 60px; object-fit: cover; border-radius: 2px;" alt="Akshar 2">
+                                    <img src="../assets/images/opera Akshara/Multipurpose-Hall-2_11zon-1024x682.png" style="width: 80px; height: 60px; object-fit: cover; border-radius: 2px;" alt="Akshar 3">
+                                    <img src="../assets/images/opera Akshara/ak-5_11zon-1024x685.png" style="width: 80px; height: 60px; object-fit: cover; border-radius: 2px;" alt="Akshar 4">
+                                    <img src="../assets/images/opera Akshara/ak-6_11zon-1024x681.png" style="width: 80px; height: 60px; object-fit: cover; border-radius: 2px;" alt="Akshar 5">
+                                </div>
+
+                                <a href="akshar.html" class="btn-view-premium">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completed Tab Panel (Reuse Grid) -->
+                    <div id="completed" class="tab-content-panel">
+                        <div class="row project-grid-premium">
+                            <!-- Project 1: Opera Primus -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="project-card-luxury">
+                                    <img src="../assets/images/Res/opera-primus-16-1024x725.png" alt="Opera Primus">
+                                    <div class="project-card-content">
+                                        <h2>Opera Primus</h2>
+                                        <div class="project-card-details">
+                                            <p>Completed project</p>
+                                            <p>Residential Apartment 48 flats</p>
+                                            <p>2 & 3 BHK Apartment</p>
+                                            <p>Bannerghatta Road</p>
+                                        </div>
+                                        <div class="project-card-footer">
+                                            <a href="opera-primus.html" class="btn-card-luxury">Discover More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- Project 2: Opera Autumn Garden -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="0.2s">
+                                <img src="../assets/images/Res/autum-garden-1-1024x685.png" alt="Opera Autumn Garden">
+                                <div class="project-card-content">
+                                    <h2>Opera Autumn Garden</h2>
+                                    <div class="project-card-details">
+                                        <p>Opera Autumn Gardens</p>
+                                        <p>Residential Projects</p>
+                                        <p>2 & 3 BHK Flats</p>
+                                        <p>BTM 1st Stage, Dollars Colony</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="autumn-garden.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Opera Spring Leaf -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="0.4s">
+                                <img src="../assets/images/Res/spring-leaf-1-1024x677.png" alt="Opera Spring Leaf">
+                                <div class="project-card-content">
+                                    <h2>Opera Spring Leaf</h2>
+                                    <div class="project-card-details">
+                                        <p>Completed project</p>
+                                        <p>1, 2 & 3 BHK Apartment</p>
+                                        <p>52 Flats</p>
+                                        <p>Bommanahalli</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="spring-leaf.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Opera Colossal Terraces -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="0.6s">
+                                <img src="../assets/images/Res/collosel.png" alt="Opera Colossal Terraces">
+                                <div class="project-card-content">
+                                    <h2>Opera Colossal Terraces</h2>
+                                    <div class="project-card-details">
+                                        <p>Commercial Cum Residential</p>
+                                        <p>Jp Nagar 2nd Phase</p>
+                                        <p>3 & 4 BHK Duplex</p>
+                                        <p>Terrace Garden Apartment</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="colossal-terraces.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: Opera Tranquil Earth -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="0.8s">
+                                <img src="../assets/images/Res/Apartment-pic_11zon-1-1024x461.jpeg" alt="Opera Tranquil Earth">
+                                <div class="project-card-content">
+                                    <h2>Opera Tranquil Earth</h2>
+                                    <div class="project-card-details">
+                                        <p>Completed project</p>
+                                        <p>1, 2, 2.5 & 3 BHK</p>
+                                        <p>60 Flats</p>
+                                        <p>JP Nagar 9th Phase</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="tranquil-earth.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Opera Brindavan -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="1.0s">
+                                <img src="../assets/images/Res/brindavan.png" alt="Opera Brindavan">
+                                <div class="project-card-content">
+                                    <h2>Opera Brindavan</h2>
+                                    <div class="project-card-details">
+                                        <p>Completed project</p>
+                                        <p>2 & 3 BHK Apartments</p>
+                                        <p>52 Flats</p>
+                                        <p>JP Nagar 7th Phase</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="brindavan.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: Opera Windsor -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="1.2s">
+                                <img src="../assets/images/Res/windstor.png" alt="Opera Windsor">
+                                <div class="project-card-content">
+                                    <h2>Opera Windsor</h2>
+                                    <div class="project-card-details">
+                                        <p>Completed Project</p>
+                                        <p>3 BHK Luxurious Apartment</p>
+                                        <p>Devarachikkanahalli</p>
+                                        <p>Bommanahalli</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="windsor.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: Opera Canopus -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="project-card-luxury wow fadeInUp" data-wow-delay="1.4s">
+                                <img src="../assets/images/Res/canopus-1_11zon-1-1024x569.png" alt="Opera Canopus">
+                                <div class="project-card-content">
+                                    <h2>Opera Canopus</h2>
+                                    <div class="project-card-details">
+                                        <p>OC & CC Approved</p>
+                                        <p>2/3 BHK Project</p>
+                                        <p>Devarachikkanahalli</p>
+                                        <p>Begur Road</p>
+                                    </div>
+                                    <div class="project-card-footer">
+                                        <a href="canopus.html" class="btn-card-luxury">Discover More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div> <!-- End row project-grid-premium -->
+                    </div> <!-- End Completed -->
+
+                    <!-- Future Tab Panel -->
+                    <div id="future" class="tab-content-panel">
+                        <div class="featured-project-row wow fadeInUp">
+                            <div class="featured-img-box">
+                                <img src="../assets/images/Asvattha/2510_Opera-Konanakunte_Perspective-view-1_11zon-1-1024x688.png" alt="Opera Asvattha">
+                            </div>
+                            <div class="featured-info-box">
+                                <h2>Opera Asvattha</h2>
+                                <p>Large Sized 2, 2.5 and 3 Bhk Flats</p>
+                                <p>Location : Brnd DPS school Konanakunte Rd, close to Yelachenahalli metro Station and Falcon City</p>
+                                <a href="asvattha.html" class="btn-view-premium">View More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Projects End -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="about-footer">
+                        <div class="footer-logo">
+                            <img src="../assets/images/logos/logo-footer.png" alt="Opera Homes">
+                        </div>
+                        <div class="about-footer-content">
+                            <p>Opera Homes with over 15 years of Experience in shaping the emerging urban landscape., has elevated itself of creating some of the landmark residential and commercial projects in bangalore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h3>Follow Links</h3>
+                        <ul>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="residential.html">Residential</a></li>
+                            <li><a href="commercial.html">Commercial</a></li>
+                            <li><a href="projects.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h3>Social Links</h3>
+                        <div class="footer-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-contact-box footer-links">
+                        <h3>Contact Details</h3>
+                        <div class="footer-contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone" style="color:#64748b;"></i></div>
+                            <div class="footer-contact-content"><p>+91 8041230476</p></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone" style="color:#64748b;"></i></div>
+                            <div class="footer-contact-content"><p>+91 9740213520</p></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-envelope" style="color:#64748b;"></i></div>
+                            <div class="footer-contact-content"><p>info.sales@operahomes.in</p></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot" style="color:#64748b;"></i></div>
+                            <div class="footer-contact-content"><p>No. 149 - 3rd Floor - Above KFC Restaurant Jayanagar 4th Block, Bangalore - 560011</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="footer-copyright-text">
+                            <p>Copyright &copy; 2024 All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="../assets/js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="../assets/js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="../assets/js/jquery.waypoints.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <!-- Isotop js file -->
+	<script src="../assets/js/isotope.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="../assets/js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="../assets/js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="../assets/js/SplitText.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="../assets/js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="../assets/js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content-panel");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.remove("active");
+        }
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+    }
+    </script>
+
+    <!-- Floating Contact Widget Start -->
+    <div class="floating-contact-wrapper" id="floatingContact">
+        <div class="contact-options">
+            <a href="tel:+918041230476" class="contact-option phone" title="Call Us">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="https://wa.me/919740213520" target="_blank" class="contact-option whatsapp" title="WhatsApp Us">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="contact-trigger" onclick="document.getElementById('floatingContact').classList.toggle('active')">
+            <div class="trigger-icon">
+                <i class="fa-solid fa-comments"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Floating Contact Widget End -->
+</body>
+
+
+</html>
