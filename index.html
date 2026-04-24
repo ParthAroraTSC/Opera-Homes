@@ -39,6 +39,8 @@
 	<link href="assets/css/floating-contact.css" rel="stylesheet">
     <!-- Akshar Section Component Css -->
 	<link href="assets/css/components/akshar-section.css" rel="stylesheet">
+    <!-- Opera Asvattha Popup Css -->
+	<link href="assets/css/asvattha-popup.css" rel="stylesheet">
 </head>
 <body>
     <!-- Preloader Start -->
@@ -911,6 +913,51 @@
         </div>
     </div>
     <!-- Floating Contact Widget End -->
+
+    <!-- Opera Asvattha Ultra-Premium Announcement Start -->
+    <div class="opera-asvattha-overlay" id="asvatthaPopup">
+        <div class="opera-asvattha-popup">
+            <button class="opera-close-trigger" id="closeAsvattha" aria-label="Close">&times;</button>
+            <div class="opera-content-wrapper">
+                <span class="opera-badge-pill">Coming Soon</span>
+                <h2>Opera Asvattha</h2>
+                <div class="opera-subtext">A visionary project redefining digital experiences</div>
+                <p class="opera-impact-line">The dawn of a new era in urban architecture.</p>
+                <a href="pages/asvattha.html" class="opera-cta-btn">Explore Soon</a>
+                <span class="opera-footer-note">Launching in 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('asvatthaPopup');
+            const closeBtn = document.getElementById('closeAsvattha');
+            
+            // Show popup after 2 seconds with premium delay
+            setTimeout(() => {
+                if (popup) {
+                    popup.classList.add('active');
+                }
+            }, 2000);
+
+            const closePopup = () => {
+                popup.classList.remove('active');
+            };
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closePopup);
+            }
+
+            // Close on overlay click
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    closePopup();
+                }
+            });
+        });
+    </script>
+    <!-- Opera Asvattha Ultra-Premium Announcement End -->
 </body>
 
 

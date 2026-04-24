@@ -1,0 +1,215 @@
+/* 
+ * Opera Asvattha - Ultra-Premium Announcement
+ * Inspired by Apple, Stripe, and Linear.app UI
+ */
+
+:root {
+    --opera-indigo: #4F46E5;
+    --opera-deep-blue: #14183E;
+    --opera-accent-gradient: linear-gradient(135deg, #4F46E5 0%, #14183E 100%);
+    --opera-glass-bg: rgba(255, 255, 255, 0.75);
+    --opera-border: rgba(255, 255, 255, 0.4);
+    --opera-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1), 0 20px 50px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay with subtle blur */
+.opera-asvattha-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.opera-asvattha-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Premium Container */
+.opera-asvattha-popup {
+    background: var(--opera-glass-bg);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    width: 90%;
+    max-width: 440px;
+    padding: 50px 40px;
+    border-radius: 32px;
+    position: relative;
+    box-shadow: var(--opera-shadow);
+    border: 1px solid var(--opera-border);
+    text-align: center;
+    transform: scale(0.85) translateY(20px);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+}
+
+.opera-asvattha-overlay.active .opera-asvattha-popup {
+    transform: scale(1) translateY(0);
+}
+
+/* Animated Gradient Border Glow */
+.opera-asvattha-popup::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.4) 0%, rgba(20, 24, 62, 0.1) 50%, rgba(79, 70, 229, 0.4) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: border-rotate 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes border-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Close Button (Minimalist) */
+.opera-close-trigger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 18px;
+    color: var(--opera-deep-blue);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.opera-close-trigger:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: rotate(90deg);
+}
+
+/* Badge (Pill Style) */
+.opera-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(79, 70, 229, 0.08);
+    color: var(--opera-indigo);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    border: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+/* Content Typography */
+.opera-asvattha-popup h2 {
+    font-size: 36px;
+    color: var(--opera-deep-blue);
+    margin-bottom: 12px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    line-height: 1;
+}
+
+.opera-subtext {
+    font-size: 16px;
+    color: #4B5563;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.opera-impact-line {
+    font-size: 14px;
+    color: #9CA3AF;
+    margin-bottom: 35px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Premium Button with Shimmer */
+.opera-cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 32px;
+    background: var(--opera-deep-blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    box-shadow: 0 10px 20px -5px rgba(20, 24, 62, 0.3);
+}
+
+.opera-cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(20, 24, 62, 0.4);
+    background: var(--opera-indigo);
+    color: #fff;
+}
+
+/* Shimmer Sweep Effect */
+.opera-cta-btn::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: none;
+    animation: shimmer-sweep 4s infinite;
+}
+
+@keyframes shimmer-sweep {
+    0% { left: -60%; }
+    20%, 100% { left: 120%; }
+}
+
+/* Footer Note */
+.opera-footer-note {
+    display: block;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #9CA3AF;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Responsive Scaling */
+@media (max-width: 480px) {
+    .opera-asvattha-popup {
+        padding: 40px 25px;
+        margin: 0 15px;
+    }
+    .opera-asvattha-popup h2 {
+        font-size: 28px;
+    }
+}
