@@ -1,34 +1,34 @@
 /* 
  * Opera Asvattha - Ultra-Premium Announcement
- * Inspired by Apple, Stripe, and Linear.app UI
+ * Refined Dark Luxury Aesthetic
  */
 
 :root {
-    --opera-indigo: #4F46E5;
-    --opera-deep-blue: #14183E;
-    --opera-accent-gradient: linear-gradient(135deg, #4F46E5 0%, #14183E 100%);
-    --opera-glass-bg: rgba(255, 255, 255, 0.75);
-    --opera-border: rgba(255, 255, 255, 0.4);
-    --opera-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1), 0 20px 50px -10px rgba(0, 0, 0, 0.15);
+    --opera-gold: #c5a47e;
+    --opera-deep-blue: #0a0d27;
+    --opera-accent-gradient: linear-gradient(135deg, #c5a47e 0%, #a88960 100%);
+    --opera-glass-bg: rgba(10, 13, 39, 0.9);
+    --opera-border: rgba(197, 164, 126, 0.3);
+    --opera-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
 }
 
-/* Overlay with subtle blur */
+/* Overlay with deep blur */
 .opera-asvattha-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10000;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .opera-asvattha-overlay.active {
@@ -39,19 +39,20 @@
 /* Premium Container */
 .opera-asvattha-popup {
     background: var(--opera-glass-bg);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
     width: 90%;
-    max-width: 520px;
+    max-width: 480px;
     padding: 0;
-    border-radius: 32px;
+    border-radius: 24px;
     position: relative;
     box-shadow: var(--opera-shadow);
     border: 1px solid var(--opera-border);
     text-align: center;
-    transform: scale(0.85) translateY(20px);
+    transform: scale(0.9) translateY(30px);
     transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     overflow: hidden;
+    color: #fff;
 }
 
 .opera-asvattha-overlay.active .opera-asvattha-popup {
@@ -63,37 +64,30 @@
     content: "";
     position: absolute;
     inset: 0;
-    padding: 1.5px;
-    border-radius: 32px;
-    background: linear-gradient(135deg, rgba(79, 70, 229, 0.4) 0%, rgba(20, 24, 62, 0.1) 50%, rgba(79, 70, 229, 0.4) 100%);
+    padding: 2px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(197, 164, 126, 0.6) 0%, rgba(10, 13, 39, 0.1) 50%, rgba(197, 164, 126, 0.6) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    animation: border-rotate 6s linear infinite;
     pointer-events: none;
 }
 
-@keyframes border-rotate {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Close Button (overlays image) */
+/* Close Button */
 .opera-close-trigger {
     position: absolute;
-    top: 14px;
-    right: 14px;
-    background: rgba(255, 255, 255, 0.75);
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    font-size: 18px;
-    color: var(--opera-deep-blue);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    color: #fff;
     cursor: pointer;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,122 +97,124 @@
 }
 
 .opera-close-trigger:hover {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.25);
     transform: rotate(90deg);
-}
-
-/* Badge (Pill Style) */
-.opera-badge-pill {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(79, 70, 229, 0.08);
-    color: var(--opera-indigo);
-    padding: 6px 16px;
-    border-radius: 100px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    border: 1px solid rgba(79, 70, 229, 0.15);
 }
 
 /* Project Image Block */
 .opera-popup-image {
     position: relative;
     width: 100%;
-    height: 210px;
+    height: 240px;
     overflow: hidden;
-    border-radius: 32px 32px 0 0;
 }
 
 .opera-popup-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     display: block;
-    transition: transform 0.6s ease;
+    transition: transform 0.8s ease;
 }
 
 .opera-asvattha-popup:hover .opera-popup-image img {
-    transform: scale(1.04);
+    transform: scale(1.08);
 }
 
 .opera-img-label {
     position: absolute;
-    bottom: 12px;
-    left: 14px;
-    background: rgba(20, 24, 62, 0.72);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-    padding: 4px 12px;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(10, 13, 39, 0.8);
+    color: var(--opera-gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 16px;
     border-radius: 100px;
+    border: 1px solid rgba(197, 164, 126, 0.3);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     text-transform: uppercase;
 }
 
-/* Content wrapper padding when image is present */
+/* Content wrapper */
 .opera-content-wrapper {
-    padding: 32px 36px 36px;
+    padding: 36px 40px 40px;
 }
 
-/* Content Typography */
+/* Badge */
+.opera-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(197, 164, 126, 0.15);
+    color: var(--opera-gold);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    border: 1px solid rgba(197, 164, 126, 0.3);
+}
+
+/* Typography */
 .opera-asvattha-popup h2 {
-    font-size: 36px;
-    color: var(--opera-deep-blue);
-    margin-bottom: 12px;
-    font-weight: 900;
-    letter-spacing: -1.5px;
-    line-height: 1;
+    font-size: 38px;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    background: linear-gradient(to bottom, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .opera-subtext {
     font-size: 16px;
-    color: #4B5563;
-    font-weight: 600;
-    margin-bottom: 8px;
-    line-height: 1.4;
+    color: #e2e8f0;
+    font-weight: 500;
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 .opera-impact-line {
     font-size: 14px;
-    color: #9CA3AF;
-    margin-bottom: 35px;
+    color: #94a3b8;
+    margin-bottom: 36px;
     font-style: italic;
     font-weight: 400;
 }
 
-/* Premium Button with Shimmer */
+/* Premium Button */
 .opera-cta-btn {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 16px 32px;
-    background: var(--opera-deep-blue);
-    color: #fff;
+    padding: 18px 32px;
+    background: var(--opera-accent-gradient);
+    color: #0a0d27;
     text-decoration: none;
-    border-radius: 16px;
+    border-radius: 12px;
     font-weight: 700;
     font-size: 16px;
+    letter-spacing: 0.5px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
-    box-shadow: 0 10px 20px -5px rgba(20, 24, 62, 0.3);
+    box-shadow: 0 10px 20px -5px rgba(197, 164, 126, 0.3);
 }
 
 .opera-cta-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px -10px rgba(20, 24, 62, 0.4);
-    background: var(--opera-indigo);
-    color: #fff;
+    box-shadow: 0 20px 40px -10px rgba(197, 164, 126, 0.5);
+    opacity: 0.95;
 }
 
-/* Shimmer Sweep Effect */
+/* Shimmer Effect */
 .opera-cta-btn::after {
     content: "";
     position: absolute;
@@ -226,10 +222,10 @@
     left: -60%;
     width: 20%;
     height: 200%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
     transform: rotate(30deg);
     transition: none;
-    animation: shimmer-sweep 4s infinite;
+    animation: shimmer-sweep 3s infinite;
 }
 
 @keyframes shimmer-sweep {
@@ -240,12 +236,25 @@
 /* Footer Note */
 .opera-footer-note {
     display: block;
-    margin-top: 25px;
-    font-size: 12px;
-    color: #9CA3AF;
-    letter-spacing: 0.5px;
+    margin-top: 24px;
+    font-size: 11px;
+    color: #64748b;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
+}
+
+/* Staggered Content Animations */
+.opera-asvattha-overlay.active .opera-badge-pill { animation: fadeInUp 0.6s ease forwards 0.2s; opacity: 0; }
+.opera-asvattha-overlay.active h2 { animation: fadeInUp 0.6s ease forwards 0.3s; opacity: 0; }
+.opera-asvattha-overlay.active .opera-subtext { animation: fadeInUp 0.6s ease forwards 0.4s; opacity: 0; }
+.opera-asvattha-overlay.active .opera-impact-line { animation: fadeInUp 0.6s ease forwards 0.5s; opacity: 0; }
+.opera-asvattha-overlay.active .opera-cta-btn { animation: fadeInUp 0.6s ease forwards 0.6s; opacity: 0; }
+.opera-asvattha-overlay.active .opera-footer-note { animation: fadeInUp 0.6s ease forwards 0.7s; opacity: 0; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(10px); }
 }
 
 /* Responsive Scaling */
@@ -254,12 +263,13 @@
         margin: 0 15px;
     }
     .opera-popup-image {
-        height: 170px;
+        height: 180px;
     }
     .opera-content-wrapper {
-        padding: 24px 22px 28px;
+        padding: 30px 24px 32px;
     }
     .opera-asvattha-popup h2 {
-        font-size: 28px;
+        font-size: 30px;
     }
 }
+
